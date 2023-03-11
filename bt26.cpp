@@ -3,9 +3,17 @@
 main(){
     int a,b,i,c,d,e;
     scanf("%d",&a);
-    b= a%10;
-    while(a>=10){
+    d=0;e=a;
+    while (a!=0){
+        b=a%10;
         a=a/10;
-    } printf("%d %d",a,b);
+        c=1;
+        for (i=1;i<=b;i++){c=c*i;
+        } d=d+c;
+    } if (e==d)
+    {
+        printf("1");
+    } else {printf("0");}
+    
     return 0;
 }
