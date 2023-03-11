@@ -5,7 +5,7 @@ main(){
     scanf("%d",&a);
     i=0;
         for(c=1;c<a;c++){
-        if (a%c==0 && c!=0){
+        if (a%c==0){
             i=i+c;
         }
     } if(a==i){printf("1");} else {printf("0");}
