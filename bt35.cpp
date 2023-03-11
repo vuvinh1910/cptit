@@ -14,6 +14,7 @@ main(){
         printf("*");
     } 
     printf("\n");
+        c=c-1;
     }}
        return 0;
 }
