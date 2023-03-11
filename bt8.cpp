@@ -1,13 +1,11 @@
 #include<stdio.h>
 #include<math.h>
 main(){
-	int a,b,c,d;
-	scanf("%d",&a);
-	b=a/365;c=(a-365*b)/7;d=a-365*b-7*c;
-	if (a<=1000){
-	printf("%d ",b);
-	printf("%d ",c);
-	printf("%d ",d);
+	float f,c;
+	scanf("%f",&c);
+	if (c<=100){
+		f=(c * 9 / 5) + 32;
+		printf("%0.2f",f);
 	}
 	return 0;
 }
