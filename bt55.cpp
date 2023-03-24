@@ -1,30 +1,18 @@
 #include <stdio.h>
 #include <math.h>
-
-int main() {
-    int N,i;
-    scanf("%d", &N);
-    int count = 0;
-    long long int num = 3;
-    if(N>=1){printf("2\n");}
-    while (count < N-1) {
-        int is_prime = 1;
-        
-        for ( i = 2; i <= sqrt(num); i++) {
-            if (num % i == 0) {
-                is_prime = 0;
-                break;
-            }
+int main(){
+	long long int a,b,c,d,e,f,g,h,i,k,l,m,n;
+    int t;
+	scanf("%d",&t);
+    d=2;e=0;
+    for(a=d;a<=d;a++){
+        d++;
+        b=1;
+        for(c=2;c<=sqrt(a);c++){
+            if(a%c==0){b=0;break;}
         }
-        
-        if (is_prime==1) {
-            printf("%lld\n", num);
-            count++;
-        }
-        
-        num=num+2;
+        if(b==1){printf("%d\n",a);e=e+1;}
+        if(e==t){break;}
     }
-    
-    //printf("\n");
     return 0;
 }
