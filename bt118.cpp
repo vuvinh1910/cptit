@@ -4,19 +4,17 @@
 int main(){
 	int a,b,c,d,e,f,g,h;
     char i[200];
-        c=d=e=0;
+    scanf("%d",&a);
+    getchar();
+    while(a--){
+        c=1;
         fgets(i,sizeof(i),stdin);
-        for(b=0;b<strlen(i)-1;b++){
-            if(97<= int(i[b]) <=122){
+        for(b=0;b<strlen(i)-2;b++){
+            if(i[b]==' '&&i[b+1]!=' '){
                 c++;
-            } else {
-                if(48<=i[b]<=57){
-                    d++;
-                } else {
-                    e++;
-                }
             }
         }
-        printf("%d %d %d\n",c,d,e);
+        printf("%d\n",c);
+    }
     return 0;
 }
