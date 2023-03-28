@@ -2,39 +2,20 @@
 #include <ctype.h>
 #include <string.h>
 int main(){
-	int a,b,c,d,e,f,g[100],h,l,m,n;
-    char i[100],q[100];
+	int a,b,c,d,e,f,g,h;
+    char i[200];
+        c=d=e=0;
         fgets(i,sizeof(i),stdin);
-        fgets(q,sizeof(q),stdin);
-        b=0;c=1;n=strlen(i)-2;
-        for(a=0,d=0;a<=strlen(i)-2;a++){
-            g[a]=0;
-        }
-        for(a=0;a<=strlen(i)-2;a++){
-            if(i[a]==q[b]){
-                if(b==strlen(q)-2){
-                    g[a]=-1;c=0;
-                }
-                b++;
-            } else {b=0;}
-        }
-        if(c==0){
-            for(a=0,d=0;a<=strlen(i)-2;a++){
-                if(g[a]==-1){
-                    for(n=a;n>=l;n--){
-                        g[n]=-1;
-                    }
-                }
-            }
-        } else {
-            printf("%s",i);
-        }
-        for(a=0,d=0;a<=strlen(i)-2;a++){
-                if(g[a]!=-1){
-                    i[d]=i[a];
-                    d++;
-                }
-            }
-            i[d]='\0';
-            printf("%s\n", i);
+        for(b=0;b<strlen(i)-1;b++){
+			if(isalpha(i[b])){
+			    c++;
+			} else {
+			    if(isdigit(i[b])){
+			        d++;
+			    } else {
+			        e++;
+			    }
+			}
+		}
+		printf("%d %d %d\n",c,d,e);
 }
